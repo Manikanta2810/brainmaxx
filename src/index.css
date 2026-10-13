@@ -55,7 +55,7 @@ nav{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-
 .sech h2{font-size:clamp(30px,5vw,40px)}
 .flt{display:flex;gap:10px;flex-wrap:wrap}
 .filterbar{flex-basis:100%;margin-top:6px}
-.games{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.games{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;scroll-margin-top:12px}
 .gt{min-height:230px;font-weight:600}
 .gh{display:flex;justify-content:space-between;align-items:center;width:100%}
 .dts{display:flex;gap:5px}.dt{width:12px;height:12px;border-radius:50%;border:2px solid currentColor}

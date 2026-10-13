@@ -71,6 +71,11 @@ export default function App() {
     setTimeout(() => window.scrollTo({ top: 0 }), 0);
   };
 
+  const pickFilter = (c: (typeof CATS)[number]) => {
+    setFilter(c);
+    setTimeout(() => document.getElementById('games')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 0);
+  };
+
   const quit = () => {
     setCur(null);
     setResult(null);
@@ -197,7 +202,7 @@ export default function App() {
         </span>
         <div className="flt filterbar" role="group" aria-label="Filter games">
           {CATS.map((c) => (
-            <button key={c} className={`ch fc${c === filter ? ' on' : ''}`} aria-pressed={c === filter} onClick={() => setFilter(c)}>
+            <button key={c} className={`ch fc${c === filter ? ' on' : ''}`} aria-pressed={c === filter} onClick={() => pickFilter(c)}>
               {c}
             </button>
           ))}
